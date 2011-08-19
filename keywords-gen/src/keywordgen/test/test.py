@@ -5,7 +5,6 @@ Created on 16/08/2011
 '''
 import unittest
 from keywordgen.keyword_calc import get_keywords
-import string
 
 class Test(unittest.TestCase):
     

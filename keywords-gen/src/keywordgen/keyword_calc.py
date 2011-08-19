@@ -5,10 +5,6 @@ Created on 06/08/2011
 '''
 import re
 
-def element_cmp (a, b):
-    return a(0) < b(0)
-
-
 def get_keywords (text, exclusion_list):
     
     keywords = []
