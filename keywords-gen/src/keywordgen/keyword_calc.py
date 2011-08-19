@@ -22,15 +22,15 @@ def get_keywords (text, exclusion_list):
             pass
         
     words_count = []
-    for word in list_of_words:
-        words_count.append( (list_of_words.count( word ), word) )
+    while list_of_words != []:
+        word = list_of_words[0]
+        words_count.append( (list_of_words.count( word ), word ) )
         salir = False
         while (not salir):
             try:
                 list_of_words.remove( word )
-            except ValueError:
+            except (ValueError, IndexError):
                 salir = True
-        print(list_of_words)
         
     words_count.sort( key=lambda word_count : word_count[0], reverse = True )
     

@@ -10,8 +10,13 @@ import string
 class Test(unittest.TestCase):
     
     def testKeyWordGen(self):
-        keywords = get_keywords ("El perro de San Roque no tiene rabo, perro perro perro, San", [",", "de", "no", "a", "El"])
-        print (keywords)
+        keywords_expected = ["perro", "San", "Roque", "tiene", "rabo"]
+        keywords_observed = get_keywords (
+                                          "El perro de San Roque no tiene rabo, perro;San Roque tiene perro. perro perro, San San",
+                                          [",", "de", "no", "a", "El"])
+        print(keywords_observed)
+        self.assertEqual( keywords_expected, keywords_observed ) 
+         
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testKeyWordGen']
