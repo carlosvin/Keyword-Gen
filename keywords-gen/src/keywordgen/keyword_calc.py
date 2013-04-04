@@ -8,6 +8,7 @@ import re
 def get_keywords (text, exclusion_list):
     
     keywords = []
+    
         
     list_of_words = re.split('\W+', text )
     
